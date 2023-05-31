@@ -5,7 +5,7 @@ class ServerHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Hello world")
+        self.wfile.write(b"Hello PW")
 
 if __name__ == "__main__":
     start_http_server(8000)
