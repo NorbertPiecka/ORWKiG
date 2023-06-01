@@ -10,6 +10,3 @@ services:
 networks:
   dev:
     driver: bridge
-
-# Use command:
-# docker compose up

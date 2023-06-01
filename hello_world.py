@@ -8,7 +8,15 @@ class ServerHandler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(b"Hello PW")
 
 if __name__ == "__main__":
+    running = True
+    user_var = ""
     start_http_server(8000)
     server = http.server.HTTPServer(('', 8001), ServerHandler)
     print("Http started on port 8001")
-    server.serve_forever()
+    while running:
+        user_var = input()
+        print(len(user_var))
+        if len(user_var) > 10:
+            running = False
+
+    server.server_close()
