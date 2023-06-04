@@ -14,7 +14,7 @@ def collect_metrics():
 
 def main():
     start_http_server(8000)
-    print("Http started on port 8001")
+    print("Http started on port 8000")
     while True:     
         try:
             collect_metrics()
